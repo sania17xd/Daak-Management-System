@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Daak - DRDO Daak Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="drdo-logo.png" alt="DRDO Logo" class="logo">
+      <h1>DRDO Daak Management System</h1>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="add.html" class="nav-link active">Add Daak</a>
+      <a href="track.html" class="nav-link">Track</a>
+      <a href="view.html" class="nav-link">View All</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="welcome-section">
+      <h2>Add New Daak Entry</h2>
+      <p>Create a new daak record by filling in the details below.</p>
+    </section>
+
+    <section class="form-section">
+      <form class="daak-form" action="#" method="post">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="daak-id">Daak ID:</label>
+            <input type="text" id="daak-id" name="daak-id" placeholder="Enter unique daak ID" required>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" placeholder="Enter daak subject" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="sender">Sender:</label>
+            <input type="text" id="sender" name="sender" placeholder="Enter sender name/department" required>
+          </div>
+
+          <div class="form-group">
+            <label for="receiver">Receiver:</label>
+            <input type="text" id="receiver" name="receiver" placeholder="Enter receiver name/department" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="type">Type:</label>
+            <select id="type" name="type" required>
+              <option value="">Select type</option>
+              <option value="incoming">Incoming</option>
+              <option value="outgoing">Outgoing</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+              <option value="">Select status</option>
+              <option value="pending">Pending</option>
+              <option value="forwarded">Forwarded</option>
+              <option value="resolved">Resolved</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="priority">Priority:</label>
+          <select id="priority" name="priority" required>
+            <option value="">Select priority</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+            <option value="urgent">Urgent</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description (Optional):</label>
+          <textarea id="description" name="description" placeholder="Enter additional details about the daak" rows="4"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Add Daak</button>
+          <button type="reset" class="reset-btn">Clear Form</button>
+          <a href="index.html" class="cancel-btn">Cancel</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DRDO. All rights reserved.</p>
+  </footer>
+</body>
+</html>

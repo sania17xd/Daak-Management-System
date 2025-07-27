@@ -344,3 +344,125 @@ footer p {
     }
 }
 
+.table-section {
+    margin-top: 40px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* Make table scrollable if content overflows */
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* Make table cleaner and more compact */
+.daak-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.daak-table th,
+.daak-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.daak-table th {
+    background-color: #f0f4f8;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Filter section improvements */
+.filter-section {
+    margin-top: 30px;
+}
+
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #1e3c72;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Button consistency */
+.filter-btn,
+.clear-btn,
+.export-btn,
+.print-btn,
+.page-btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #2a5298;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-btn:hover,
+.clear-btn:hover,
+.export-btn:hover,
+.print-btn:hover,
+.page-btn:hover {
+    background: #1e3c72;
+}
+
+/* Pagination & record count styling */
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.page-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Prevent horizontal scroll on page */
+body {
+    overflow-x: hidden;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .filter-controls {
+        flex-direction: column;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+}
+
+/* ======== END OF ENHANCEMENTS ======== */
+
+

@@ -1,181 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>View All Daak - DRDO Daak Management System</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View All Daak - DRDO Daak Management System</title>
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <header>
-    <div class="header-content">
-      <img src="drdo-logo.png" alt="DRDO Logo" class="logo">
-      <h1>DRDO Daak Management System</h1>
-    </div>
-    <nav>
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="add.html" class="nav-link">Add Daak</a>
-      <a href="track.html" class="nav-link">Track</a>
-      <a href="view.html" class="nav-link active">View All</a>
-    </nav>
-  </header>
+  <header>
+    <div class="header-content">
+      <img src="drdo-logo.png" alt="DRDO Logo" class="logo">
+      <h1>DRDO Daak Management System</h1>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="add.html" class="nav-link">Add Daak</a>
+      <a href="track.html" class="nav-link">Track</a>
+      <a href="view.html" class="nav-link active">View All</a>
+    </nav>
+  </header>
 
-  <main>
-    <section class="welcome-section">
-      <h2>All Daak Records</h2>
-      <p>Complete list of all official mail (daak) received and sent by the organization.</p>
-    </section>
+  <main>
+    <section class="welcome-section">
+      <h2>All Daak Records</h2>
+      <p>Complete list of all official mail (daak) received and sent by the organization.</p>
+    </section>
 
-    <section class="filter-section">
-      <div class="filter-controls">
-        <div class="filter-group">
-          <label for="filter-type">Filter by Type:</label>
-          <select id="filter-type" name="filter-type">
-            <option value="">All Types</option>
-            <option value="incoming">Incoming</option>
-            <option value="outgoing">Outgoing</option>
-          </select>
-        </div>
-        
-        <div class="filter-group">
-          <label for="filter-status">Filter by Status:</label>
-          <select id="filter-status" name="filter-status">
-            <option value="">All Status</option>
-            <option value="pending">Pending</option>
-            <option value="forwarded">Forwarded</option>
-            <option value="resolved">Resolved</option>
-          </select>
-        </div>
-        
-        <div class="filter-group">
-          <label for="search-daak">Search:</label>
-          <input type="text" id="search-daak" name="search-daak" placeholder="Search by ID, Subject, or Sender">
-        </div>
-        
-        <button type="button" class="filter-btn">Apply Filters</button>
-        <button type="button" class="clear-btn">Clear</button>
-      </div>
-    </section>
+    <section class="filter-section">
+      <div class="filter-controls">
+        <div class="filter-group">
+          <label for="filter-type">Filter by Type:</label>
+          <select id="filter-type" name="filter-type">
+            <option value="">All Types</option>
+            <option value="incoming">Incoming</option>
+            <option value="outgoing">Outgoing</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label for="filter-status">Filter by Status:</label>
+          <select id="filter-status" name="filter-status">
+            <option value="">All Status</option>
+            <option value="pending">Pending</option>
+            <option value="forwarded">Forwarded</option>
+            <option value="resolved">Resolved</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label for="search-daak">Search:</label>
+          <input type="text" id="search-daak" name="search-daak" placeholder="Search by ID, Subject, or Sender">
+        </div>
+        
+        <button type="button" class="filter-btn">Apply Filters</button>
+        <button type="button" class="clear-btn">Clear</button>
+      </div>
+    </section>
 
-    <section class="table-section">
-      <div class="table-header">
-        <h3>Daak Records</h3>
-        <div class="table-actions">
-          <button type="button" class="export-btn">Export to PDF</button>
-          <button type="button" class="print-btn">Print</button>
-        </div>
-      </div>
-      
-      <div class="table-container">
-        <table class="daak-table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Subject</th>
-              <th>Date</th>
-              <th>Sender</th>
-              <th>Receiver</th>
-              <th>Type</th>
-              <th>Status</th>
-              <th>Priority</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="daak-id">001</td>
-              <td class="subject">Approval Letter for Research Project</td>
-              <td>2025-06-20</td>
-              <td>Head Office</td>
-              <td>R&D Team</td>
-              <td><span class="badge incoming">Incoming</span></td>
-              <td><span class="badge pending">Pending</span></td>
-              <td><span class="priority high">High</span></td>
-              <td class="actions">
-                <button class="view-btn" title="View Details">👁️</button>
-                <button class="edit-btn" title="Edit">✏️</button>
-                <button class="delete-btn" title="Delete">🗑️</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="daak-id">002</td>
-              <td class="subject">Test Report - Laboratory Analysis</td>
-              <td>2025-06-21</td>
-              <td>Lab Department</td>
-              <td>Head Office</td>
-              <td><span class="badge outgoing">Outgoing</span></td>
-              <td><span class="badge forwarded">Forwarded</span></td>
-              <td><span class="priority medium">Medium</span></td>
-              <td class="actions">
-                <button class="view-btn" title="View Details">👁️</button>
-                <button class="edit-btn" title="Edit">✏️</button>
-                <button class="delete-btn" title="Delete">🗑️</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="daak-id">003</td>
-              <td class="subject">Budget Allocation Request</td>
-              <td>2025-06-22</td>
-              <td>Finance Department</td>
-              <td>Director Office</td>
-              <td><span class="badge incoming">Incoming</span></td>
-              <td><span class="badge resolved">Resolved</span></td>
-              <td><span class="priority low">Low</span></td>
-              <td class="actions">
-                <button class="view-btn" title="View Details">👁️</button>
-                <button class="edit-btn" title="Edit">✏️</button>
-                <button class="delete-btn" title="Delete">🗑️</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="daak-id">004</td>
-              <td class="subject">Security Clearance Document</td>
-              <td>2025-06-23</td>
-              <td>Security Office</td>
-              <td>HR Department</td>
-              <td><span class="badge outgoing">Outgoing</span></td>
-              <td><span class="badge pending">Pending</span></td>
-              <td><span class="priority urgent">Urgent</span></td>
-              <td class="actions">
-                <button class="view-btn" title="View Details">👁️</button>
-                <button class="edit-btn" title="Edit">✏️</button>
-                <button class="delete-btn" title="Delete">🗑️</button>
-              </td>
-            </tr>
-            <tr>
-              <td class="daak-id">005</td>
-              <td class="subject">Equipment Procurement Notice</td>
-              <td>2025-06-24</td>
-              <td>Procurement Team</td>
-              <td>Technical Department</td>
-              <td><span class="badge incoming">Incoming</span></td>
-              <td><span class="badge forwarded">Forwarded</span></td>
-              <td><span class="priority medium">Medium</span></td>
-              <td class="actions">
-                <button class="view-btn" title="View Details">👁️</button>
-                <button class="edit-btn" title="Edit">✏️</button>
-                <button class="delete-btn" title="Delete">🗑️</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      
-      <div class="table-footer">
-        <div class="pagination">
-          <button class="page-btn" disabled>Previous</button>
-          <span class="page-info">Page 1 of 3</span>
-          <button class="page-btn">Next</button>
-        </div>
-        <div class="record-count">
-          <span>Showing 5 of 15 records</span>
-        </div>
-      </div>
-    </section>
-  </main>
+    <section class="table-section">
+      <div class="table-header">
+        <h3>Daak Records</h3>
+        <div class="table-actions">
+          <button type="button" class="export-btn">Export to PDF</button>
+          <button type="button" class="print-btn">Print</button>
+        </div>
+      </div>
+      
+      <div class="table-container">
+        <table class="daak-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Subject</th>
+              <th>Date</th>
+              <th>Sender</th>
+              <th>Receiver</th>
+              <th>Type</th>
+              <th>Status</th>
+              <th>Priority</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Daak entries will be dynamically loaded here by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="table-footer">
+        <div class="pagination">
+          <button class="page-btn" disabled>Previous</button>
+          <span class="page-info">Page 1 of 3</span>
+          <button class="page-btn">Next</button>
+        </div>
+        <div class="record-count">
+          <span>Showing 5 of 15 records</span>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 DRDO. All rights reserved.</p>
-  </footer>
+  <footer>
+    <p>&copy; 2025 DRDO. All rights reserved.</p>
+  </footer>
+
+  <script src="viewAllDaak.js"></script>
 </body>
 </html>

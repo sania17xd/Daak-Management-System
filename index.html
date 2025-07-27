@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DRDO Daak Management System</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRDO Daak Management System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="header-content">
-      <img src="drdo-logo.png" alt="DRDO Logo" class="logo">
-      <h1>DRDO Daak Management System</h1>
-    </div>
-    <nav>
-      <a href="index.html" class="nav-link active">Home</a>
-      <a href="add.html" class="nav-link">Add Daak</a>
-      <a href="track.html" class="nav-link">Track</a>
-      <a href="view.html" class="nav-link">View All</a>
-    </nav>
-  </header>
- 
-
-  <main>
-    <section class="welcome-section">
-      <h2>Welcome to the Daak Management System</h2>
-      <p>Manage all your official mail (daak) efficiently and systematically.</p>
-    </section>
-
-    <section class="login-section">
-      <h3>Login to Continue</h3>
-      <form class="login-form" action="#" method="post">
-        <div class="form-group">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" placeholder="Enter your username" required>
+    <header>
+        <div class="header-content">
+            <img src="drdo-logo.png" alt="DRDO Logo" class="logo">
+            <h1>DRDO Daak Management System</h1>
         </div>
+        <nav>
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="add.html" class="nav-link">Add Daak</a>
+            <a href="track.html" class="nav-link">Track</a>
+            <a href="view.html" class="nav-link">View All</a>
+        </nav>
+    </header>
 
-        <div class="form-group">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" placeholder="Enter your password" required>
-        </div>
+    <main>
+        <section class="welcome-section">
+            <h2>Welcome to the Daak Management System</h2>
+            <p>Manage all your official mail (daak) efficiently and systematically.</p>
+        </section>
 
-        <div class="form-group">
-          <button type="submit" class="login-btn">Login</button>
-        </div>
+        <section class="login-section">
+            <h3>Login to Continue</h3>
+            <form class="login-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
 
-        <div class="form-links">
-          <a href="#" class="forgot-password">Forgot Password?</a>
-        </div>
-      </form>
-    </section>
-  </main>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
 
-  <footer>
-    <p>&copy; 2025 DRDO. All rights reserved.</p>
-  </footer>
+                <div class="form-group">
+                    <button type="submit" class="login-btn">Login</button>
+                </div>
+
+                <div class="form-links">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <!-- OPTIONAL: Add this div if you want login messages to appear on the page -->
+                <div id="loginMessage" class="text-center mt-4"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DRDO. All rights reserved.</p>
+    </footer>
+
+    <!-- This is the ONLY HTML modification needed to link the JavaScript -->
+    <script src="login.js"></script>
 </body>
 </html>
